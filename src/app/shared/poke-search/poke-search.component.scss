@@ -7,6 +7,9 @@
         align-items: center;
         position: relative;
         width: 100%;
+        max-width: rem-calc(768);
+            margin: 0 auto;
+            margin-bottom: rem-calc(32);
         border-radius: rem-calc(10);
 
         background-color: rgba(255, 255, 255, 0.2);
