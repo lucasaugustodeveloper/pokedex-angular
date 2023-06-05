@@ -1,9 +1,1 @@
-@import '../../../config-scss/rem-calc.scss';
 
-:host {
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: rem-calc(10);
-    }
-}
