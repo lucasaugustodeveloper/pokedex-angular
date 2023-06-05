@@ -1,6 +1,9 @@
 @import '../../../config-scss/rem-calc.scss';
 
 :host {
+    display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: rem-calc(10);
     .pokemon {
         padding: rem-calc(24);
         border-radius: rem-calc(10);
@@ -20,6 +23,7 @@
         &__status {
             h2 {
                 font-size: rem-calc(32);
+                text-transform: capitalize;
             }
 
             ul {
