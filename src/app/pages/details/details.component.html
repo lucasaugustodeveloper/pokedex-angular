@@ -2,14 +2,14 @@
 
 <ng-template [ngIf]="isLoading">
   <main class="pokemon">
-    <img class="pokemon__image" [src]="pokemon.sprites.other.dream_world.front_default" [alt]="pokemon.name">`
+    <img class="pokemon__image slideInDown" [src]="pokemon.sprites.other.dream_world.front_default" [alt]="pokemon.name">`
 
     <section class="pokemon__names">
-      <h1>{{ pokemon.name }}</h1>
-      <h2>{{ pokemon.names[0].name }}</h2>
+      <h1 class="slideInLeft">{{ pokemon.name }}</h1>
+      <h2 class="slideInRight">{{ pokemon.names[0].name }}</h2>
     </section>
 
-    <section class="pokemon__status">
+    <section class="pokemon__status fadeIn">
       <article class="pokemon__status__stats">
         <section>
           <h3>Statistics</h3>
