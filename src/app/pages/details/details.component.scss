@@ -1,0 +1,122 @@
+@import '../../../config-scss/rem-calc.scss';
+
+:host {
+    .pokemon {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        position: relative;
+        min-height: rem-calc(900);
+        max-width: rem-calc(600);
+        margin: 0 auto;
+        margin-top: rem-calc(150);
+        border-radius: rem-calc(50);
+        padding: 50px;
+
+        background-color: var(--white);
+
+        &__image {
+            position: absolute;
+            left: rem-calc(-20);
+            top: rem-calc(-120);
+            height: rem-calc(250);
+            width: rem-calc(250);
+        }
+
+        &__names {
+            position: absolute;
+            right: 0;
+            top: rem-calc(-40);
+
+            h1 {
+                font-size: rem-calc(30);
+                font-weight: bold;
+                text-align: right;
+                text-transform: capitalize;
+
+                position: absolute;
+                right: rem-calc(40);
+                top: rem-calc(-10);
+                z-index: 9;
+                width: rem-calc(400);
+
+                color: var(--white);
+            }
+
+            h2 {
+                font-size: rem-calc(60);
+                text-align: right;
+
+                display: block;
+
+                position: absolute;
+                right: rem-calc(30);
+                top: rem-calc(-50);
+                width: rem-calc(400);
+                z-index: 1;
+
+                color: rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        &__status {
+            width: 100%;
+            height: 55vh;
+
+            &__stats {
+                margin-top: rem-calc(50);
+
+                h3 {
+                    font-size: rem-calc(54);
+                    font-weight: bold;
+                    text-decoration: underline;
+
+                    color: var(--secondary-color);
+                }
+
+                ol {
+                    margin-top: rem-calc(20);
+
+                    li {
+                        font-size: rem-calc(24);
+                        font-weight: bold;
+                        text-transform: capitalize;
+
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        margin-bottom: rem-calc(10);
+
+                        strong {
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn {
+            font-size: rem-calc(24);
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            max-height: rem-calc(54);
+            width: 100%;
+
+            border-radius: rem-calc(10);
+
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+    }
+}
