@@ -1,77 +1,86 @@
 @import '../../../config-scss/rem-calc.scss';
 
-.listPokemon {
+:host {
+  .listPokemon {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: rem-calc(10);
-}
-.pokemon {
-    padding: rem-calc(24);
-    border-radius: rem-calc(10);
+    grid-gap: rem-calc(10);
 
-    background-color: var(--white);
+    .pokemon {
+      padding: rem-calc(24);
+      border-radius: rem-calc(10);
+      background-color: var(--white);
 
-    &__link {
-            font-weight: 700;
-            text-decoration: none;
+      &__link {
+        font-weight: 700;
+        text-decoration: none;
 
         display: flex;
-            justify-content: space-between;
+        justify-content: space-between;
 
         color: var(--primary-color);
+      }
+
+      &__status {
+        h2 {
+          font-size: rem-calc(32);
+          text-transform: capitalize;
         }
 
-        &__status {
-            h2 {
-                font-size: rem-calc(32);
-                text-transform: capitalize;
-            }
+        ul {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          margin-top: rem-calc(16);
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ul {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    display: flex;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    flex-direction: column;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    flex-wrap: wrap;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    margin-top: rem-calc(16);
+          li {
+            font-size: rem-calc(14);
+            font-weight: 400;
 
-            li {
-                    font-size: rem-calc(14);
-                    font-weight: 400;
-
-
-                display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                max-width: 60%;
-
-                padding: rem-calc(5);
-                    border-radius: rem-calc(100);
-
-                background-color: var(--gray);
-                }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                li:nth-child(even) {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    margin: rem-calc(5) 0;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-
-        &__image {
             display: flex;
             justify-content: center;
             align-items: center;
 
+            max-width: 60%;
+
+            padding: rem-calc(5);
+            border-radius: rem-calc(100);
+
+            background-color: var(--gray);
+          }
+
+          li:nth-child(even) {
+            margin: rem-calc(5) 0;
+          }
+        }
+      }
+
+      &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         width: rem-calc(160);
-            height: rem-calc(163);
+        height: rem-calc(163);
 
         background-image: url('../../../assets/bg/bg-pokemon.svg');
-            background-position: 0 rem-calc(15);
-            background-repeat: no-repeat;
-            background-size: contain;
+        background-position: 0 rem-calc(15);
+        background-repeat: no-repeat;
+        background-size: contain;
 
         img {
-                width: 65%;
-                height: 65%;
-        }
+            width: 65%;
+            height: 65%;
+          }
+      }
     }
+
+  }
+
+  .error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: rem-calc(150);
+  }
 }

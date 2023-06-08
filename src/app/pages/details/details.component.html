@@ -30,3 +30,7 @@
     </a>
     </main>
 </ng-template>
+
+<main class="pokemon__error" *ngIf="apiError">
+  <img src="assets/error.svg" alt="Erro ao exibir o pokemon" />
+</main>
