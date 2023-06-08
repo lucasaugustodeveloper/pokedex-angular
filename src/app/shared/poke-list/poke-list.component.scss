@@ -1,23 +1,24 @@
 @import '../../../config-scss/rem-calc.scss';
 
-:host {
+.listPokemon {
     display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
         grid-gap: rem-calc(10);
-    .pokemon {
-        padding: rem-calc(24);
-        border-radius: rem-calc(10);
+}
+.pokemon {
+    padding: rem-calc(24);
+    border-radius: rem-calc(10);
 
-        background-color: var(--white);
+    background-color: var(--white);
 
-        &__link {
+    &__link {
             font-weight: 700;
             text-decoration: none;
 
-            display: flex;
+        display: flex;
             justify-content: space-between;
 
-            color: var(--primary-color);
+        color: var(--primary-color);
         }
 
         &__status {
@@ -26,52 +27,51 @@
                 text-transform: capitalize;
             }
 
-            ul {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                margin-top: rem-calc(16);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ul {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    display: flex;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    flex-direction: column;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    flex-wrap: wrap;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    margin-top: rem-calc(16);
 
-                li {
+            li {
                     font-size: rem-calc(14);
                     font-weight: 400;
 
 
-                    display: flex;
+                display: flex;
                     justify-content: center;
                     align-items: center;
 
-                    max-width: 60%;
+                max-width: 60%;
 
-                    padding: rem-calc(5);
+                padding: rem-calc(5);
                     border-radius: rem-calc(100);
 
-                    background-color: var(--gray);
+                background-color: var(--gray);
                 }
 
-                li:nth-child(even) {
-                    margin: rem-calc(5) 0;
-                }
-            }
-        }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                li:nth-child(even) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    margin: rem-calc(5) 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
 
         &__image {
             display: flex;
             justify-content: center;
             align-items: center;
 
-            width: rem-calc(160);
+        width: rem-calc(160);
             height: rem-calc(163);
 
-            background-image: url('../../../assets/bg/bg-pokemon.svg');
+        background-image: url('../../../assets/bg/bg-pokemon.svg');
             background-position: 0 rem-calc(15);
             background-repeat: no-repeat;
             background-size: contain;
 
-            img {
+        img {
                 width: 65%;
                 height: 65%;
-            }
         }
     }
 }
