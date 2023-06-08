@@ -1,30 +1,32 @@
 <poke-header />
 
-<main class="pokemon">
-  <img class="pokemon__image" [src]="pokemon.sprites.other.dream_world.front_default" [alt]="pokemon.name">`
+<ng-template [ngIf]="isLoading">
+  <main class="pokemon">
+    <img class="pokemon__image" [src]="pokemon.sprites.other.dream_world.front_default" [alt]="pokemon.name">`
 
-  <section class="pokemon__names">
-    <h1>{{ pokemon.name }}</h1>
-    <h2>{{ pokemon.names[0].name }}</h2>
-  </section>
+    <section class="pokemon__names">
+      <h1>{{ pokemon.name }}</h1>
+      <h2>{{ pokemon.names[0].name }}</h2>
+    </section>
 
-  <section class="pokemon__status">
-    <article class="pokemon__status__stats">
-      <section>
-        <h3>Statistics</h3>
+    <section class="pokemon__status">
+      <article class="pokemon__status__stats">
+        <section>
+          <h3>Statistics</h3>
 
-        <ol>
-          <li *ngFor="let value of pokemon.stats">
-            <strong>{{ value.stat.name }}: </strong>
-            {{ value.base_stat }}
-          </li>
-        </ol>
+          <ol>
+            <li *ngFor="let value of pokemon.stats">
+              <strong>{{ value.stat.name }}: </strong>
+              {{ value.base_stat }}
+            </li>
+          </ol>
+          </section>
+
+      </article>
       </section>
 
-    </article>
-  </section>
-
-  <a [routerLink]="['']" class="btn btn__secondary">
-    Back
-  </a>
-</main>
+    <a [routerLink]="['']" class="btn btn__secondary">
+      Back
+    </a>
+    </main>
+</ng-template>
